@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <body>
+<center>
+    <div class="topbar">
+
+<a href="index.html">back to home</a>
+</div>
+</center>
+    <section id="about">
+
+<center>
+<h1>About Us</h1>
+<img src="https://5.imimg.com/data5/SELLER/Default/2023/11/363056223/MX/LN/ZA/203497949/fabe-salon-interiors-jpg.jpg"  width="300px" height="200px"
+</center>
+
+<p style="text-align:center;">
+<b>Welcome to Beauty World : </b>Your ultimate destination for elegance, style, and self-care.<br> At Beauty World, we believe that beauty is more than skin deep;<br> it’s about confidence, expression, and feeling your absolute best.
+</p>
+
+<center>
+<h3>Contact Details</h3>
+<p>📞 Phone: 9876543210</p>
+<p>📧 Email: beautyworld@gmail.com</p>
+<p>📍 Location:No.413,gandhi road,5th street,<br>
+                Nungambakkam,<br>
+                Chennai, Tamil Nadu</p>
+</center>
+
+</section>
+<style>
+  #about{
+background-image:url("https://img.freepik.com/free-psd/3d-rendering-beauty-banner_23-2150159871.jpg?semt=ais_rp_progressive&w=740&q=80");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+min-height:100vh;
+padding:40px 0;
+  }
+
+
+  nav{
+background:black;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+.topbar{
+text-align:center;
+padding:10px 30px;
+}
+
+.topbar a{
+text-decoration:none;
+background:#ff2a6d;
+color:white;
+padding:8px 15px;
+border-radius:5px;
+}
+
+
+</style>
+<script>
+  document.querySelectorAll("nav a").forEach(link => {
+link.addEventListener("click", function(e) {
+
+e.preventDefault()
+
+const target = document.querySelector(this.getAttribute("href"))
+
+target.scrollIntoView({
+behavior:"smooth"
+})
+
+})
+})
+</script>
+  </body>
+</html>

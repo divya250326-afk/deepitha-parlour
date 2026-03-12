@@ -1,0 +1,23 @@
+body {
+ font-family: Arial;
+ text-align: center;
+ background-color: #fff5f8;
+}
+body{
+    background-image:url(beauty.jpg) ;
+    background-size: 1400px 1100px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav {
+ background-color: #ff69b4;
+ padding: 15px;
+}
+
+nav a {
+ color: white;
+ margin: 15px;
+ text-decoration: none;
+ font-weight: bold;
+}

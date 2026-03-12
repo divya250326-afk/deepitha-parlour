@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Service Form Validation</title>
+    
+</head>
+<body>
+
+    <center>
+    <div class="topbar">
+
+<a href="index.html">back to home</a>
+</div>
+</center>
+    <center><h1><b>BEAUTY PARLOUR</b></h1>
+        <h3>fill the details for booking</h3>
+    
+    
+    </center>
+
+    <style>
+
+        body{
+background-image:url("https://static.vecteezy.com/system/resources/thumbnails/037/246/742/small/ai-generated-make-up-products-advertisment-background-with-copy-space-free-photo.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+min-height:100vh;
+padding:40px 0;
+}
+
+.topbar{
+text-align:center;
+padding:10px 30px;
+}
+
+.topbar a{
+text-decoration:none;
+background:#ff2a6d;
+color:white;
+padding:8px 15px;
+border-radius:5px;
+}
+
+
+
+
+    </style>
+    
+<center>
+    
+<form onsubmit="return validateForm()">
+    
+
+  <label>Name:</label>
+  <input type="text" id="username"><br><br>
+
+  <label>Email:</label>
+  <input type="text" id="email"><br><br>
+
+  <label>Contact:</label>
+  <input type="text" id="contact"><br><br>
+
+  <label>Gender:</label>
+  <input type="radio" name="gender" value="Male">Male
+  <input type="radio" name="gender" value="Female">Female
+  <input type="radio" name="gender" value="Others">Others<br><br>
+
+  <label>Service:</label>
+  <select id="service">
+    <option value="">--Select--</option>
+    <option value="Hair Services">Haircut Services</option>
+    <option value="Body Services">Bridal Services</option>
+    <option value="Makeup Services">party Makeup Services</option>
+    <option value="Face Services">Facial Services</option>
+  </select><br><br>
+
+  <label>Timing:</label>
+  <input type="number" id="timing"><br><br>
+
+  <label>Product:</label><br>
+  <input type="checkbox" name="product" value="Foundation">Foundation<br>
+  <input type="checkbox" name="product" value="Lipstick">Lipstick<br>
+  <input type="checkbox" name="product" value="Eye Shadow">Eye Shadow<br><br>
+
+  <label>Your Feedback:</label><br>
+  <textarea id="feedback" rows="5" cols="30"></textarea><br><br>
+
+  <input type="submit" value="Submit">
+
+</form>
+</div>
+</center>
+
+<script>
+function validateForm() {
+
+    let name = document.getElementById("username").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let contact = document.getElementById("contact").value.trim();
+    let service = document.getElementById("service").value;
+    let timing = document.getElementById("timing").value.trim();
+    let feedback = document.getElementById("feedback").value.trim();
+
+    let gender = document.getElementsByName("gender");
+    let products = document.getElementsByName("product");
+
+    
+    if (name === "") {
+        alert("Please enter your name");
+        return false;
+    }
+
+    
+    if (email=="") {
+        alert("Please enter a valid email");
+        return false;
+    }
+
+    
+   
+    if (contact=="") {
+        alert("Please enter a valid 10-digit contact number");
+        return false;
+    }
+
+    
+    
+        
+
+
+    if (service === "") {
+        alert("Please select a service");
+        return false;
+    }
+
+
+    if (timing === "") {
+        alert("Please enter timing");
+        return false;
+    }
+
+    
+    let productSelected = false;
+    for (let i = 0; i < products.length; i++) {
+        if (products[i].checked) {
+            productSelected = true;
+            break;
+        }
+    }
+    if (!productSelected) {
+        alert("Please select at least one product");
+        return false;
+    }
+
+    
+    if (feedback === "") {
+        alert("Please enter your feedback");
+        return false;
+    }
+
+    alert("your booking is successfully submitted!");
+    return true;
+}
+</script>
+
+</body>
+</html>

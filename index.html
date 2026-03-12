@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<style>
+    .first-section {
+    position: relative; /* important for pseudo-element positioning */
+    min-height: 400px; /* adjust as needed */
+    padding: 40px;
+    color:rgb(0, 0, 0); /* text visible on dark overlay */
+    overflow: hidden;
+}
+
+.first-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(250, 163, 192);
+    filter: blur(5px);
+    z-index: -1; /* behind content */
+}
+    body{
+        background-color: pink;
+        background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+min-height:100vh;
+padding:40px;
+height: 7000px;
+
+
+    }
+.container{
+  display: flex;
+  gap: 20px; 
+}
+
+.container img{
+  width: 220px; 
+  height: 240px;
+  margin: auto;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow:0 0 10px rgba(7, 7, 7, 0.1);
+}
+.review-box{
+    width: 350px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+.stars span{
+    font-size: 25px;
+    cursor: pointer;
+}
+.whatsapp{
+    position: fixed;
+    bottom:20px;
+    right: 20px;
+
+}
+.whatsapp img{
+    width: 40px;
+    background: fixed;
+
+}
+  .last-section {
+    position: relative; /* important for pseudo-element positioning */
+    min-height: 400px; /* adjust as needed */
+    padding: 40px;
+    color: white; /* text visible on dark overlay */
+    overflow: hidden;
+}
+
+.last-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('back.webp') center/cover no-repeat;
+    filter: blur(5px);
+    z-index: -1; /* behind content */
+}
+
+.content-box {
+    display: flex;
+    justify-content: space-between; /* left content left, right content right */
+    width: 100%;
+    gap: 50px;
+}
+
+
+.left{
+    flex: 1;
+    text-align: left;
+}
+
+.left h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+} 
+
+.left p{
+    font-size: 18px;
+    margin: 5px 0;
+} 
+.center{
+    flex: 1;
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.right img{
+    width: 40px;
+    cursor: pointer;
+}
+h3 {
+    background-color: rgba(238, 103, 123, 0.9); 
+    height: 150px;/* light pink */
+    width: 300px;          /* same as your images */
+    padding: 10px;
+    border-radius: 0 0 10px 10px; /* rounded bottom corners */
+    text-align: center;
+    display: inline-block; /* keeps it under the image */
+    margin-top: -10px;     /* slightly overlap image */
+    color: #000;
+    line-height: 1.4;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
+</style>
+<div class="first-section">
+    <nav>
+ <a href="#">Home</a>
+<a href="service.html">Services</a>
+<a href="about.html">About Us</a>
+  <a href="career.html">Cart</a>  
+ <a href="contact.html">Personal Details</a> 
+</nav>
+
+<h1>Welcome to Natural Beauty Parlour</h1>
+<p><b>Your beauty, our responsibility 
+    <br>
+    <br>🤝 𝐖𝐄𝐋𝐂𝐎𝐌𝐄.....</b></p>
+     <p style="margin-top: 80px;"><b>Our services are listed below.
+        <br> Please scroll down to explore and book the service that best fits your needs.
+        <br>Delivering High-Quality Services Without Breaking Your Budget.</b></p> 
+<br>
+<br>
+</div>
+
+
+    <h2> Bridal makeup</h2>
+<div class="container">
+  <img src="b.jpg">
+  <img src="bb.png">
+  <img src="bbb.jpg">
+  <img src="hh.webp">
+  
+</div>
+<br>
+<br>
+<br>
+  <h3><b>"Step into your special day with flawless radiance.<br>
+Our expert touch enhances your natural beauty.<br>
+Feel confident, elegant, and picture-perfect.<br>
+Because your dream look deserves perfection."</b></h3>
+<br>
+<br>
+<h2>Groom Makeover</h2>
+<div class="container">
+    <img src="g.webp">
+    <img src="gg.jpg">
+    <img src="ggg.jpg">
+    <img src="gggg.jpg">
+</div>
+<br>
+<br>
+<br>
+<h3><b>"Look sharp, confident, and stylish for your big day.<br>
+From hair to skin, we craft the perfect look.<br>
+Subtle, classy, and unforgettable results.<br>
+Make every glance count with a groom’s glow."</b></h3>
+<br>
+<br>
+
+
+<h2>Hair Cut & Hair styles</h2>
+<div class="container">
+    <img src="haircut.jpg">
+    <img src="hg.jpg">
+    <img src="hgg.avif">
+    <img src="gh.jpg">
+    
+</div>
+<div class="container">
+    <img src="hm.jpg">
+    <img src="mhh.png">
+    <img src="mhhh.webp">
+    <img src="mhm.jpg">
+    
+</div>
+
+<br>
+<br>
+<h2>Hair Styles</h2>
+<div class="container">
+    <img src="hh.webp">
+    <img src="hhh.jpg">
+    <img src="hhhh.webp">
+    <img src="h.jpg">
+    </div>
+<div class="container">
+    <img src="hhhhh.jpg">
+    <img src="hhhhhh.webp">
+    
+</div>
+<br>
+<br>
+<h3><b>"Transform your hair, transform your style.<br>
+Trendy cuts, silky smooth, and full of life.<br>
+Personalized styling for every occasion.<br>
+Confidence starts with the perfect hair."</b></h3>
+<br>
+<br>
+<h2>Party Makeup</h2>
+<div class="container">
+    <img src="party.png">
+    <img src="ph.jpg">
+    <img src="phh.jpg">
+    <img src="pp.webp">
+    </div>
+
+<div class="container">
+<img src="ppp.webp">
+      <img src="pppp.jpg">
+       <img src="makeup.jpg">
+        <img src="e.jpg">
+        </div>
+        <br>
+        <br>
+        <h3><b>"Turn heads and shine at every event.<br>
+Our makeup makes you the center of attention.<br>
+Vibrant, trendy, and long-lasting finish.<br>
+Because every party deserves a glamorous you."</b></h3>
+        <br>
+<br>
+<h2>Facial Services</h2>
+<div class="container">
+    <img src="f.webp">
+    <img src="facial.jpg">
+    <img src="ff.webp">
+    <img src="fff.jpg">
+     <img src="ffff.webp">
+    </div>
+    <br>
+        <br>
+    <h3><b>"Glow from within with our rejuvenating facials.<br>
+Nourish, refresh, and revitalize your skin.<br>
+Expert care for radiant, healthy skin.<br>
+Feel relaxed, refreshed, and beautiful."</b></h3>
+<br>
+<br>
+<h2>Manicure Pedicure</h2><br>
+<div class="container">
+    <img src="mm.jpeg">
+    <img src="mcc.webp">
+    <img src="mccc.avif">
+    <img src="mc.jpeg">
+    <img src="mc.jpg">
+</div>
+<br>
+<br>
+    
+<h3><b>
+    "Pamper your hands and feet with style.<br>
+Soft, shiny, and perfectly groomed nails.<br>
+Relaxing treatment for a confident touch.<br>
+Because every detail reflects your elegance."</b>
+</h3>
+<br>
+<br>
+<h2>mehndi Designs</h2>
+<div class="container">
+    <img src="mehndi.jpg">
+    <img src="mm.jpg">
+    <img src="mmm.webp">
+</div>
+<br>
+
+<h2>Meet Our Founder</h2>
+<img src="data:image/jpeg;base64,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" width="200px" height="250px">
+<p><b>Meet the visionary behind our journey.
+     Our founder started this venture with a simple mission:<br>
+      to provide high-quality services at affordable prices.
+      With a strong passion for innovation and customer satisfaction, <br>
+      she worked tirelessly to turn a small idea into a growing platform. 
+      Her dedication, creativity, and commitment to excellence continue to guide our team every day.<br>
+       she believes that quality service should be accessible to everyone, regardless of budget.
+     
+         We are proud to share his story and the passion that drives our success.</b></p>
+
+    <br>
+    <br>
+
+    <div class="review-box">
+        <h2>Give ratings for Us</h2>
+        <br>
+        <label>Your Name :</label>
+        <input type="text"  placeholder="enter your name">
+        <br>
+        <br>
+        <lable>ratings :</lable>
+        <div class="stars">
+            <span onclick="rate(1)">⭐</span>
+            <span onclick="rate(2)">⭐</span>
+            <span onclick="rate(3)">⭐</span>
+            <span onclick="rate(4)">⭐</span>
+            <span onclick="rate(5)">⭐</span>
+        </div>
+        <br>
+        <br>
+        <label >Rating Feedback</label>
+        <textarea placeholder="write your review"></textarea>
+        <br>
+        <br>
+        <button>Submit Rating</button>
+    </div>
+    <p style="margin-top: 150px;"></p>
+    <script>
+        function rate(star){
+            alert("your rated"+star+"star");
+        }
+    </script>
+    <a href="https://wa.me/8098974836 " class="whatsapp" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+    </a>
+
+
+    <div class="last-section">
+
+<div class="content-box">
+
+<div class="left">
+<h2>Our Services</h2>
+<p> ✺ Bridal Makeup</p>
+<p>✺ Party Makeup</p>
+<p> ✺ Hair Styling</p>
+<p>✺ Facial Services</p>
+<p>✺ Manicure Pedicure</p>
+<p>✺ Pedicure</p>
+<p>✺ mehndi</p>
+<p>✺ baby shower makeup</p>
+<p>✺ theme Mehendi designs</p>
+
+
+</div>
+<div class="center">
+    <h2>Contact</h2>
+    <p>📞 Phone: 9876543210</p>
+    <p>No.413,gandhi road,5th street,<br>
+Nungambakkam,<br>
+Chennai, Tamil Nadu</p>
+</div>
+
+<div class="right">
+    <h5>Contct us in :</h5>
+<a href="https://wa.me/918098974836">
+<img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-whatsapp-icon-png-image_3584845.jpg">
+
+</a>
+
+<a href="https://instagram.com">
+<img src="https://img.freepik.com/premium-psd/instagram-application-logo_23-2151544088.jpg?semt=ais_hybrid&w=740&q=80">
+</a>
+
+<a href="mailto:beauty@gmail.com">
+<img src="https://illustoon.com/photo/2751.png">
+</a>
+</div>
+
+
+
+</div>
+
+    
+     
+
+</body>
+</html>
