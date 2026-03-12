@@ -150,7 +150,15 @@ alert(service.name + " Added to Cart");
 
 }
 
+function bookNow(service) {
+    const phoneNumber = "918098974836"; // your WhatsApp number
+    alert(service.name + " You want to book now!");
+    const message = `Hello! I want to book the service: ${service.name} at the price of ${service.price}`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+    
 
+}
 
 </script>
 

@@ -112,6 +112,7 @@ card.innerHTML = `
 <h3>${item.name}</h3>
 <p class="price">${item.price}</p>
 <button onclick="removeItem(${index})">Remove</button>
+<button class="clear" onclick="bookAll()">Book All</button>
 `;
 
 container.appendChild(card);
@@ -161,6 +162,30 @@ localStorage.setItem("book", JSON.stringify(book));
 
 
 
+}
+function bookAll() {
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+
+    // Create message with all items
+    let message = "Hello, I want to book the following services:\n\n";
+    cart.forEach((item, index) => {
+        message += `${index + 1}. ${item.name} - ${item.price}\n`;
+    });
+
+    const phoneNumber = "916380397522"; // your WhatsApp number
+    const url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+
+    // Optional: move all items to 'book' storage
+    let book = JSON.parse(localStorage.getItem("book")) || [];
+    book = book.concat(cart);
+    localStorage.setItem("book", JSON.stringify(book));
+
+    alert("All services ready to book via WhatsApp!");
 }
 
 </script>
